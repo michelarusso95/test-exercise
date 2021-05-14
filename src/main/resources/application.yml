@@ -1,10 +1,16 @@
 spring:
   datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:db;DB_CLOSE_DELAY=-1
+    username: sa
+    password: sa
     initialization-mode: always
-    password: '000000'
-    url: jdbc:postgresql://localhost:5432/test
-    username: test_user
+    platform: h2
   jpa:
-    show-sql: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+    show-sql: true
