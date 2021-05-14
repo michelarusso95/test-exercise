@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    initialization-mode: always
+    password: '000000'
+    url: jdbc:postgresql://localhost:5432/test
+    username: test_user
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
